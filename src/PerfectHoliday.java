@@ -30,7 +30,8 @@ public class PerfectHoliday
         int day = Integer.parseInt(arrayOfDates[0]);
 
         return new Date(year - 1900 + 2000, month, day);
-    }
+    } // folosirea clasei din java Date pentru a afisa  o data
+        // noua pe formatul specific
 
     public static void main(String[] args) throws FileNotFoundException
     {
@@ -59,9 +60,11 @@ public class PerfectHoliday
                         Double.parseDouble(arrayDataIntrare[3]),
                         formareData(arrayDataIntrare[4]),
                         formareData(arrayDataIntrare[5]));
+                // formarea unui obiect de tip locatie cu parametrii necesari
 
                 for (int index = 6; index < arrayDataIntrare.length; index++)
                     locatie.addActivity(arrayDataIntrare[index]);
+                // adaugarea listei de activitati intr-un ArryList
 
                 LocationList.add(locatie);
                 LocationMap.put(locatie.nume, locatie);
@@ -143,7 +146,8 @@ public class PerfectHoliday
                             System.out.println(listaLocatiiDinTara.get(index));
                         } else break;
                     }
-
+                    // cautarea locatiei si ordonarea acestora in ordine crescatoare
+                    // a pretului necesar pentru a petrece toata perioada AB acolo
                 }
             }
             else
